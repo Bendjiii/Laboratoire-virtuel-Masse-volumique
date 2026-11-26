@@ -1,0 +1,6 @@
+{
+  "name": "Laboratoire virtuel – Masse volumique",
+  "description": "Application pédagogique interactive de Physique-Chimie pour mesurer la masse et le volume de l'eau, de l'alcool et du dichlorométhane afin de déterminer leur masse volumique.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

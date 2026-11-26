@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Source Serif 4", Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom accessible laboratory range slider */
+input[type="range"].lab-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  border-radius: 999px;
+  background: #dce8f5;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"].lab-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #146ebe;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 41, 66, 0.25);
+  cursor: grab;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease;
+}
+
+input[type="range"].lab-slider::-webkit-slider-thumb:hover {
+  background: #0e589b;
+  transform: scale(1.08);
+}
+
+input[type="range"].lab-slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.12);
+}
+
+input[type="range"].lab-slider::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #146ebe;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 41, 66, 0.25);
+  cursor: grab;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease;
+}
+
+input[type="range"].lab-slider:focus-visible {
+  box-shadow: 0 0 0 3px rgba(20, 110, 190, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
